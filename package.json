@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "concurrently \"gulp\" \"json-server feedbacks.json\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -25,6 +26,9 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
+    "concurrently": "^7.3.0",
+    "json-server": "^0.17.0",
+    "uuid": "^8.3.2",
     "validate": "^5.2.0"
   }
 }

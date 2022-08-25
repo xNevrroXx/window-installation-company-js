@@ -65,10 +65,10 @@ function tryValidate(formEl) {
       phoneField.classList.add("form_input_error")
     }
 
-    return -1;
+    return false;
   }
 
-  return 1;
+  return true;
 
   function resetErrorValidate() {
     formEl.querySelectorAll(".error").forEach(errorEl => {
