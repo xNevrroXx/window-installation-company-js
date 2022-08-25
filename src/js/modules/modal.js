@@ -1,5 +1,5 @@
-function modal(triggerOpenBtnSelectors, modalElSelector) {
-  const triggerOpenBtns = document.querySelectorAll(triggerOpenBtnSelectors);
+function modal(triggerOpenBtnSelector, modalElSelector) {
+  const triggerOpenBtns = document.querySelectorAll(triggerOpenBtnSelector);
   const modalEl = document.querySelector(modalElSelector);
 
   triggerOpenBtns.forEach(triggerEl => {

@@ -64,6 +64,14 @@ textarea:focus {
   border-radius: 1rem;
   -moz-box-sizing: border-box;
 }
+.form_input_error {
+  border-color: #ff2424;
+  margin-bottom: 1rem;
+}
+.form_input + .error {
+  color: #ff2424;
+  margin-bottom: 1rem;
+}
 
 .form_input::-webkit-input-placeholder {
   color: #999;
