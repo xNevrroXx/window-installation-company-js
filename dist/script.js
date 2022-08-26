@@ -5979,6 +5979,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modal */ "./src/js/modules/modal.js");
 /* harmony import */ var _modules_feedbackForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/feedbackForm */ "./src/js/modules/feedbackForm.js");
 /* harmony import */ var _modules_maskInput__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/maskInput */ "./src/js/modules/maskInput.js");
+/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js");
+
 
 
 
@@ -5986,7 +5988,30 @@ window.addEventListener("DOMContentLoaded", () => {
   Object(_modules_modal__WEBPACK_IMPORTED_MODULE_0__["default"])(".popup_engineer_btn", ".popup_engineer");
   Object(_modules_modal__WEBPACK_IMPORTED_MODULE_0__["default"])(".phone_link", ".popup");
   Object(_modules_maskInput__WEBPACK_IMPORTED_MODULE_2__["default"])();
-  Object(_modules_feedbackForm__WEBPACK_IMPORTED_MODULE_1__["default"])(".form", "http://localhost:3000/feedbacks"); // todo add URL for posting
+  Object(_modules_feedbackForm__WEBPACK_IMPORTED_MODULE_1__["default"])(".form", "http://localhost:3000/feedbacks");
+  const triggerContentMatchObj = {
+    tree: {
+      trigger: "[data-type-glazing='tree']",
+      content: ".glazing_content.tree"
+    },
+    aluminium: {
+      trigger: "[data-type-glazing='aluminium']",
+      content: ".glazing_content.aluminium"
+    },
+    plastic: {
+      trigger: "[data-type-glazing='plastic']",
+      content: ".glazing_content.plastic"
+    },
+    french: {
+      trigger: "[data-type-glazing='french']",
+      content: ".glazing_content.french"
+    },
+    rise: {
+      trigger: "[data-type-glazing='rise']",
+      content: ".glazing_content.rise"
+    }
+  };
+  Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_3__["default"])("section.glazing", triggerContentMatchObj);
 });
 
 /***/ }),
@@ -6218,6 +6243,55 @@ function modal(triggerOpenBtnSelector, modalElSelector) {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (modal);
+
+/***/ }),
+
+/***/ "./src/js/modules/tabs.js":
+/*!********************************!*\
+  !*** ./src/js/modules/tabs.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function activateTabs(mainContainerSelector, triggerContentMatchObj, defaultActiveTab = 0) {
+  const mainContainerEl = document.querySelector(mainContainerSelector);
+  let activeTab = triggerContentMatchObj[Object.keys(triggerContentMatchObj)[defaultActiveTab]];
+  console.log(triggerContentMatchObj[Object.keys(triggerContentMatchObj)[defaultActiveTab]]);
+  toggleActiveTabs(activeTab);
+  mainContainerEl.addEventListener("click", event => {
+    const target = event.target;
+
+    for (const key in triggerContentMatchObj) {
+      const selectorsObj = triggerContentMatchObj[key];
+      const someTriggerEl = mainContainerEl.querySelector(selectorsObj.trigger);
+
+      if (target) {
+        Array.from(someTriggerEl.children).forEach(child => {
+          if (target === someTriggerEl || child === target) {
+            toggleActiveTabs(selectorsObj);
+          }
+        });
+      }
+    }
+  });
+
+  function toggleActiveTabs(selectorsObjActive) {
+    const lastActiveTab = JSON.parse(JSON.stringify(activeTab));
+    const triggerLastElem = mainContainerEl.querySelector(lastActiveTab.trigger);
+    const contentLastElem = mainContainerEl.querySelector(lastActiveTab.content);
+    triggerLastElem.classList.remove("active");
+    contentLastElem.classList.remove("active");
+    activeTab = selectorsObjActive;
+    const triggerNewElem = mainContainerEl.querySelector(activeTab.trigger);
+    const contentNewElem = mainContainerEl.querySelector(activeTab.content);
+    triggerNewElem.classList.add("active");
+    contentNewElem.classList.add("active");
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (activateTabs);
 
 /***/ }),
 

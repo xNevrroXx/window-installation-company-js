@@ -376,6 +376,18 @@ textarea:focus {
 
 .glazing_block {
   display: inline-block;
+  vertical-align: top;
+}
+.glazing_block.active {
+  transform: scale(1.05);
+}
+
+.glazing_content {
+  display: none;
+}
+
+.glazing_content.active {
+  display: block;
 }
 
 .glazing_block img {
@@ -485,13 +497,6 @@ textarea:focus {
 
 .glazing_price_btn {
   padding: 2rem 2rem;
-}
-
-.glazing .aluminum,
-.glazing .plastic,
-.glazing .french,
-.glazing .rise {
-  display: none;
 }
 
 .glazing a.active {
