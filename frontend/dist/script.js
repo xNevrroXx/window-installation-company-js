@@ -5992,7 +5992,7 @@ window.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".popup_calc").style.display = "none";
   });
   Object(_modules_maskInput__WEBPACK_IMPORTED_MODULE_2__["default"])();
-  Object(_modules_feedbackForm__WEBPACK_IMPORTED_MODULE_1__["default"])(".form", "http://localhost:3000/feedbacks");
+  Object(_modules_feedbackForm__WEBPACK_IMPORTED_MODULE_1__["default"])(".form", "http://localhost:9999/feedbacks");
   const triggerContentMatchObj = {
     tree: {
       trigger: "[data-type-glazing='tree']",

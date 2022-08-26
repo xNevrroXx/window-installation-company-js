@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e0c38705-e8a8-47a5-8820-3f87da28ef55" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/modules/files.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/routes/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/css/animate.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/decoration/2/decoration2_img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/decoration/2/metal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/decoration/2/plastic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/decoration/2/profnastil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/decoration/2/tree.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/decoration/2/vinil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/decoration/3/aluminum.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/decoration/3/bezram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/decoration/3/decoration3_img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/decoration/3/pvh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/decoration/3/tree.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/decoration/4/decoration4_img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/decoration/4/gofrolist.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/decoration/4/metallocherepitsa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/decoration/4/ondulin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/decoration/4/polikarbonat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/decoration/4/steklopaket.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/decoration/decoration_img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/decoration/material/laminate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/decoration/material/lining.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/decoration/material/plastic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/decoration/material/pvh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/decoration/material/tree.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/glazing/aluminum/cold.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/glazing/aluminum/warm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/glazing/check.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/glazing/french/aluminum.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/glazing/french/plastic.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/glazing/icons/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/glazing/icons/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/glazing/icons/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/glazing/icons/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/glazing/icons/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/glazing/img_cold.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/glazing/img_warm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/glazing/left_arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/glazing/line.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/glazing/line_cold.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/glazing/plastic/warm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/glazing/right_arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/glazing/rise/aluminum.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/glazing/rise/tree.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/guarantees/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/guarantees/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/guarantees/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/guarantees/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/guarantees/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/guarantees/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/guarantees/header_sub.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/header/clock.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/header/edit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/header/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/header/phone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/main/bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/main/icons/delivery.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/main/icons/guaranty.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/main/icons/quality.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/main/icons/quality1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/main/icons/time.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/modal_calc/balkon/ba_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/modal_calc/balkon/ba_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/modal_calc/balkon/ba_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/modal_calc/balkon/ba_04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/modal_calc/balkon/type1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/modal_calc/balkon/type2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/modal_calc/balkon/type3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/modal_calc/balkon/type4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/modal_calc/check.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/modal_calc/check_warm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/modal_calc/icon_cold.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/modal_calc/icon_warm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/our_works/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/our_works/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/our_works/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/our_works/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/our_works/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/our_works/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/our_works/7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/our_works/8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/our_works/big_img/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/our_works/big_img/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/our_works/big_img/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/our_works/big_img/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/our_works/big_img/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/our_works/big_img/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/our_works/big_img/7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/our_works/big_img/8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/our_works/zoom-in.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/payment/credit-card.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/payment/museum.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/payment/wallet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/sale/bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/server.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/slick/ajax-loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/slick/config.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/slick/fonts/slick.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/slick/fonts/slick.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/slick/fonts/slick.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/slick/fonts/slick.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/slick/slick-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/slick/slick-theme.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/slick/slick-theme.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/slick/slick.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/slick/slick.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/slick/slick.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/slick/slick.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/slick/slick.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/script.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedbacks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/animate.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/decoration/2/decoration2_img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/decoration/2/metal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/decoration/2/plastic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/decoration/2/profnastil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/decoration/2/tree.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/decoration/2/vinil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/decoration/3/aluminum.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/decoration/3/bezram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/decoration/3/decoration3_img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/decoration/3/pvh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/decoration/3/tree.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/decoration/4/decoration4_img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/decoration/4/gofrolist.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/decoration/4/metallocherepitsa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/decoration/4/ondulin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/decoration/4/polikarbonat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/decoration/4/steklopaket.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/decoration/decoration_img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/decoration/material/laminate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/decoration/material/lining.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/decoration/material/plastic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/decoration/material/pvh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/decoration/material/tree.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/glazing/aluminum/cold.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/glazing/aluminum/warm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/glazing/check.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/glazing/french/aluminum.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/glazing/french/plastic.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/glazing/icons/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/glazing/icons/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/glazing/icons/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/glazing/icons/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/glazing/icons/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/glazing/img_cold.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/glazing/img_warm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/glazing/left_arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/glazing/line.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/glazing/line_cold.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/glazing/plastic/warm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/glazing/right_arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/glazing/rise/aluminum.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/glazing/rise/tree.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/guarantees/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/guarantees/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/guarantees/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/guarantees/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/guarantees/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/guarantees/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/guarantees/header_sub.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/header/clock.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/header/edit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/header/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/header/phone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/main/bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/main/icons/delivery.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/main/icons/guaranty.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/main/icons/quality.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/main/icons/quality1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/main/icons/time.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/modal_calc/balkon/ba_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/modal_calc/balkon/ba_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/modal_calc/balkon/ba_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/modal_calc/balkon/ba_04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/modal_calc/balkon/type1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/modal_calc/balkon/type2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/modal_calc/balkon/type3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/modal_calc/balkon/type4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/modal_calc/check.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/modal_calc/check_warm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/modal_calc/icon_cold.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/modal_calc/icon_warm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/our_works/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/our_works/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/our_works/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/our_works/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/our_works/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/our_works/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/our_works/7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/our_works/8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/our_works/big_img/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/our_works/big_img/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/our_works/big_img/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/our_works/big_img/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/our_works/big_img/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/our_works/big_img/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/our_works/big_img/7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/our_works/big_img/8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/our_works/zoom-in.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/payment/credit-card.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/payment/museum.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/payment/wallet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/sale/bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/server.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/slick/ajax-loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/slick/config.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/slick/fonts/slick.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/slick/fonts/slick.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/slick/fonts/slick.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/slick/fonts/slick.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/slick/slick-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/slick/slick-theme.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/slick/slick-theme.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/slick/slick.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/slick/slick.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/slick/slick.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/slick/slick.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/slick/slick.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/feedbackForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/maskInput.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/modal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/tabs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slider.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Duax9lzUfJIbXUmC8rniyedL1d" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Владимир/Documents/Programming/Frontend/Studies projects/Node.js/node lessons",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Владимир\Documents\Programming\Frontend\Studies projects\Native JS projects\Source\backend" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e0c38705-e8a8-47a5-8820-3f87da28ef55" name="Changes" comment="" />
+      <created>1661551671208</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661551671208</updated>
+      <workItem from="1661551673341" duration="5857000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
