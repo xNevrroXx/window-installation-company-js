@@ -28,7 +28,6 @@
   "dependencies": {
     "concurrently": "^7.3.0",
     "json-server": "^0.17.0",
-    "uuid": "^8.3.2",
     "validate": "^5.2.0"
   }
 }
