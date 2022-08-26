@@ -5987,6 +5987,10 @@ __webpack_require__.r(__webpack_exports__);
 window.addEventListener("DOMContentLoaded", () => {
   Object(_modules_modal__WEBPACK_IMPORTED_MODULE_0__["default"])(".popup_engineer_btn", ".popup_engineer");
   Object(_modules_modal__WEBPACK_IMPORTED_MODULE_0__["default"])(".phone_link", ".popup");
+  Object(_modules_modal__WEBPACK_IMPORTED_MODULE_0__["default"])(".popup_calc_btn", ".popup_calc");
+  Object(_modules_modal__WEBPACK_IMPORTED_MODULE_0__["default"])(".popup_calc_button", ".popup_calc_profile", "block", function () {
+    document.querySelector(".popup_calc").style.display = "none";
+  });
   Object(_modules_maskInput__WEBPACK_IMPORTED_MODULE_2__["default"])();
   Object(_modules_feedbackForm__WEBPACK_IMPORTED_MODULE_1__["default"])(".form", "http://localhost:3000/feedbacks");
   const triggerContentMatchObj = {
@@ -6012,6 +6016,25 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   };
   Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_3__["default"])("section.glazing", triggerContentMatchObj);
+  const triggerContentMatchObjIcons = {
+    1: {
+      trigger: '[src="assets/img/modal_calc/balkon/ba_01.png"]',
+      content: '[src="assets/img/modal_calc/balkon/type1.png"]'
+    },
+    2: {
+      trigger: '[src="assets/img/modal_calc/balkon/ba_02.png"]',
+      content: '[src="assets/img/modal_calc/balkon/type2.png"]'
+    },
+    3: {
+      trigger: '[src="assets/img/modal_calc/balkon/ba_03.png"]',
+      content: '[src="assets/img/modal_calc/balkon/type3.png"]'
+    },
+    4: {
+      trigger: '[src="assets/img/modal_calc/balkon/ba_04.png"]',
+      content: '[src="assets/img/modal_calc/balkon/type4.png"]'
+    }
+  };
+  Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_3__["default"])(".popup_calc", triggerContentMatchObjIcons, 0, "do_image_more", "calc");
 });
 
 /***/ }),
@@ -6225,12 +6248,13 @@ function setMaskPhoneNumber() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-function modal(triggerOpenBtnSelector, modalElSelector) {
+function modal(triggerOpenBtnSelector, modalSelector, activeDisplayTypeStyle = "block", additionalFunctionOnOpen = () => {}) {
   const triggerOpenBtns = document.querySelectorAll(triggerOpenBtnSelector);
-  const modalEl = document.querySelector(modalElSelector);
+  const modalEl = document.querySelector(modalSelector);
   triggerOpenBtns.forEach(triggerEl => {
     triggerEl.addEventListener("click", () => {
-      modalEl.style.display = "block";
+      additionalFunctionOnOpen();
+      modalEl.style.display = activeDisplayTypeStyle;
     });
   });
   modalEl.addEventListener("click", event => {
@@ -6255,10 +6279,9 @@ function modal(triggerOpenBtnSelector, modalElSelector) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-function activateTabs(mainContainerSelector, triggerContentMatchObj, defaultActiveTab = 0) {
+function activateTabs(mainContainerSelector, triggerContentMatchObj, defaultActiveTab = 0, activeClass = "active", typeTabs = "") {
   const mainContainerEl = document.querySelector(mainContainerSelector);
   let activeTab = triggerContentMatchObj[Object.keys(triggerContentMatchObj)[defaultActiveTab]];
-  console.log(triggerContentMatchObj[Object.keys(triggerContentMatchObj)[defaultActiveTab]]);
   toggleActiveTabs(activeTab);
   mainContainerEl.addEventListener("click", event => {
     const target = event.target;
@@ -6268,8 +6291,13 @@ function activateTabs(mainContainerSelector, triggerContentMatchObj, defaultActi
       const someTriggerEl = mainContainerEl.querySelector(selectorsObj.trigger);
 
       if (target) {
+        if (target === someTriggerEl) {
+          toggleActiveTabs(selectorsObj);
+          return;
+        }
+
         Array.from(someTriggerEl.children).forEach(child => {
-          if (target === someTriggerEl || child === target) {
+          if (child === target) {
             toggleActiveTabs(selectorsObj);
           }
         });
@@ -6281,13 +6309,13 @@ function activateTabs(mainContainerSelector, triggerContentMatchObj, defaultActi
     const lastActiveTab = JSON.parse(JSON.stringify(activeTab));
     const triggerLastElem = mainContainerEl.querySelector(lastActiveTab.trigger);
     const contentLastElem = mainContainerEl.querySelector(lastActiveTab.content);
-    triggerLastElem.classList.remove("active");
-    contentLastElem.classList.remove("active");
+    if (typeTabs === "calc") triggerLastElem.parentElement.classList.remove(activeClass);else triggerLastElem.classList.remove(activeClass);
+    contentLastElem.classList.remove(activeClass);
     activeTab = selectorsObjActive;
     const triggerNewElem = mainContainerEl.querySelector(activeTab.trigger);
     const contentNewElem = mainContainerEl.querySelector(activeTab.content);
-    triggerNewElem.classList.add("active");
-    contentNewElem.classList.add("active");
+    if (typeTabs === "calc") triggerNewElem.parentElement.classList.add(activeClass);else triggerNewElem.classList.add(activeClass);
+    contentNewElem.classList.add(activeClass);
   }
 }
 

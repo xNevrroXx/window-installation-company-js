@@ -1,7 +1,7 @@
-function activateTabs(mainContainerSelector, triggerContentMatchObj, defaultActiveTab = 0) {
+function activateTabs(mainContainerSelector, triggerContentMatchObj, defaultActiveTab = 0, activeClass = "active", typeTabs="") {
   const mainContainerEl = document.querySelector(mainContainerSelector);
   let activeTab = triggerContentMatchObj[Object.keys(triggerContentMatchObj)[defaultActiveTab]];
-  console.log(triggerContentMatchObj[Object.keys(triggerContentMatchObj)[defaultActiveTab]])
+
   toggleActiveTabs(activeTab);
 
   mainContainerEl.addEventListener("click", (event) => {
@@ -12,8 +12,12 @@ function activateTabs(mainContainerSelector, triggerContentMatchObj, defaultActi
       const someTriggerEl = mainContainerEl.querySelector(selectorsObj.trigger);
 
       if(target) {
+        if(target === someTriggerEl) {
+          toggleActiveTabs(selectorsObj);
+          return;
+        }
         Array.from(someTriggerEl.children).forEach(child => {
-          if(target === someTriggerEl || child === target) {
+          if (child === target) {
             toggleActiveTabs(selectorsObj);
           }
         })
@@ -26,14 +30,21 @@ function activateTabs(mainContainerSelector, triggerContentMatchObj, defaultActi
     const triggerLastElem = mainContainerEl.querySelector(lastActiveTab.trigger);
     const contentLastElem = mainContainerEl.querySelector(lastActiveTab.content);
 
-    triggerLastElem.classList.remove("active");
-    contentLastElem.classList.remove("active");
+    if(typeTabs === "calc")
+      triggerLastElem.parentElement.classList.remove(activeClass);
+    else
+      triggerLastElem.classList.remove(activeClass);
+    contentLastElem.classList.remove(activeClass);
 
     activeTab = selectorsObjActive;
     const triggerNewElem = mainContainerEl.querySelector(activeTab.trigger);
     const contentNewElem = mainContainerEl.querySelector(activeTab.content);
-    triggerNewElem.classList.add("active");
-    contentNewElem.classList.add("active");
+
+    if(typeTabs === "calc")
+      triggerNewElem.parentElement.classList.add(activeClass);
+    else
+      triggerNewElem.classList.add(activeClass);
+    contentNewElem.classList.add(activeClass);
   }
 }
 

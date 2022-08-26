@@ -939,7 +939,11 @@ textarea:focus {
 .popup_calc_content .balcon_icons {
   margin-bottom: 1rem;
 }
-
+.popup_calc_content .big_img img.do_image_more {
+  display: block;
+  margin: 0 auto;
+  height: 300px;
+}
 .popup_calc_content .big_img img {
   display: none;
   margin-bottom: 3rem;
@@ -950,10 +954,13 @@ textarea:focus {
   display: inline-block;
 }
 
-.do_image_more img{
+.balcon_icons_img img {
+  cursor: pointer;
+}
+
+.do_image_more img {
     width: 110px;
     height: 70px;
-    cursor: pointer;
   }
 
 .popup_calc_close {
@@ -1765,10 +1772,17 @@ textarea:focus {
     width: 20%;
   }
 
+  .popup_calc_content {
+    display: block;
+    color: darkred;
+  }
+
   .popup_calc_content .big_img img {
+    display: none;
     margin-bottom: 2rem;
     width: 25rem;
   }
+
 
   .popup_calc_content #type1 {
     display: inline-block;

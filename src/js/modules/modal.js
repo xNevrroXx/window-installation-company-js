@@ -1,10 +1,11 @@
-function modal(triggerOpenBtnSelector, modalElSelector) {
+function modal(triggerOpenBtnSelector, modalSelector, activeDisplayTypeStyle = "block", additionalFunctionOnOpen = () => {}) {
   const triggerOpenBtns = document.querySelectorAll(triggerOpenBtnSelector);
-  const modalEl = document.querySelector(modalElSelector);
+  const modalEl = document.querySelector(modalSelector);
 
   triggerOpenBtns.forEach(triggerEl => {
     triggerEl.addEventListener("click", () => {
-      modalEl.style.display = "block";
+      additionalFunctionOnOpen();
+      modalEl.style.display = activeDisplayTypeStyle;
     })
   })
 
