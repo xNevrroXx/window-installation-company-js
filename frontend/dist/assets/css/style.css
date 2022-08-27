@@ -591,6 +591,20 @@ textarea:focus {
   color: #000000;
 }
 
+.decoration_slider {
+  display: flex;
+  justify-content: space-between;
+}
+.decoration_slider .decoration_item {
+  cursor: pointer;
+}
+.decoration .internal.after_click,
+.decoration .external.after_click,
+.decoration .rising.after_click,
+.decoration .roof.after_click {
+  display: block;
+}
+.decoration .internal,
 .decoration .external,
 .decoration .rising,
 .decoration .roof {
@@ -1077,9 +1091,9 @@ textarea:focus {
   background: url(../img/modal_calc/check.png) center center no-repeat;
 }
 
-.no-background {
-  background: url();
-}
+/*.no-background {*/
+/*  background: url();*/
+/*}*/
 
 .checkbox-custom[id="warm"]::before {
   background: url(../img/modal_calc/check_warm.png) center center no-repeat;
@@ -1087,7 +1101,7 @@ textarea:focus {
 
 .popup_calc_profile_content .label {
   padding: 1.3rem 2rem;
-  z-index: 18rem;
+  /*z-index: 18rem;*/
   color: #000000;
   font-size: 1.5rem;
   font-weight: 500;

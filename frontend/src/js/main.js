@@ -7,13 +7,17 @@ import calcFeedbackForm from "./modules/calcFeedbackForm";
 export const urlServer = "http://localhost:9999/feedbacks";
 
 window.addEventListener("DOMContentLoaded", () => {
+  // modals
   modals(".popup_engineer_btn", ".popup_engineer");
   modals(".phone_link", ".popup");
 
+  // feedback forms
   setMaskPhoneNumber();
   feedbackForm(".form:not(.form_end)", urlServer);
+  calcFeedbackForm( urlServer);
 
-  const triggerContentMatchObj = {
+  // tabs
+  const triggerContentMatchObj1 = {
     tree: {
       trigger: "[data-type-glazing='tree']",
       content: ".glazing_content.tree"
@@ -35,9 +39,9 @@ window.addEventListener("DOMContentLoaded", () => {
       content: ".glazing_content.rise"
     },
   }
-  activateTabs("section.glazing", triggerContentMatchObj);
+  activateTabs("section.glazing", triggerContentMatchObj1);
 
-  const triggerContentMatchObjIcons = {
+  const triggerContentMatchObj2 = {
     1: {
       trigger: '[src="assets/img/modal_calc/balkon/ba_01.png"]',
       content: '[src="assets/img/modal_calc/balkon/type1.png"]'
@@ -55,7 +59,25 @@ window.addEventListener("DOMContentLoaded", () => {
       content: '[src="assets/img/modal_calc/balkon/type4.png"]'
     }
   };
-  activateTabs(".popup_calc", triggerContentMatchObjIcons, 0, "do_image_more", "calc");
+  activateTabs(".popup_calc", triggerContentMatchObj2, 0, "do_image_more", "calc");
 
-  calcFeedbackForm( urlServer);
+  const triggerContentMatchObj3 = {
+    internal: {
+      trigger: ".internal_link",
+      content: ".decoration_content > .row > .internal"
+    },
+    external: {
+      trigger: ".external_link",
+      content: ".decoration_content > .row > .external"
+    },
+    rising: {
+      trigger: ".rising_link",
+      content: ".decoration_content > .row > .rising"
+    },
+    roof: {
+      trigger: ".roof_link",
+      content: ".decoration_content > .row > .roof"
+    },
+  }
+  activateTabs("section.decoration", triggerContentMatchObj3, 0, "after_click")
 })

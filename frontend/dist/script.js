@@ -5989,11 +5989,15 @@ __webpack_require__.r(__webpack_exports__);
 
 const urlServer = "http://localhost:9999/feedbacks";
 window.addEventListener("DOMContentLoaded", () => {
+  // modals
   Object(_modules_modals__WEBPACK_IMPORTED_MODULE_0__["default"])(".popup_engineer_btn", ".popup_engineer");
-  Object(_modules_modals__WEBPACK_IMPORTED_MODULE_0__["default"])(".phone_link", ".popup");
+  Object(_modules_modals__WEBPACK_IMPORTED_MODULE_0__["default"])(".phone_link", ".popup"); // feedback forms
+
   Object(_modules_maskInput__WEBPACK_IMPORTED_MODULE_2__["default"])();
   Object(_modules_feedbackForm__WEBPACK_IMPORTED_MODULE_1__["default"])(".form:not(.form_end)", urlServer);
-  const triggerContentMatchObj = {
+  Object(_modules_calcFeedbackForm__WEBPACK_IMPORTED_MODULE_4__["default"])(urlServer); // tabs
+
+  const triggerContentMatchObj1 = {
     tree: {
       trigger: "[data-type-glazing='tree']",
       content: ".glazing_content.tree"
@@ -6015,8 +6019,8 @@ window.addEventListener("DOMContentLoaded", () => {
       content: ".glazing_content.rise"
     }
   };
-  Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_3__["default"])("section.glazing", triggerContentMatchObj);
-  const triggerContentMatchObjIcons = {
+  Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_3__["default"])("section.glazing", triggerContentMatchObj1);
+  const triggerContentMatchObj2 = {
     1: {
       trigger: '[src="assets/img/modal_calc/balkon/ba_01.png"]',
       content: '[src="assets/img/modal_calc/balkon/type1.png"]'
@@ -6034,8 +6038,26 @@ window.addEventListener("DOMContentLoaded", () => {
       content: '[src="assets/img/modal_calc/balkon/type4.png"]'
     }
   };
-  Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_3__["default"])(".popup_calc", triggerContentMatchObjIcons, 0, "do_image_more", "calc");
-  Object(_modules_calcFeedbackForm__WEBPACK_IMPORTED_MODULE_4__["default"])(urlServer);
+  Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_3__["default"])(".popup_calc", triggerContentMatchObj2, 0, "do_image_more", "calc");
+  const triggerContentMatchObj3 = {
+    internal: {
+      trigger: ".internal_link",
+      content: ".decoration_content > .row > .internal"
+    },
+    external: {
+      trigger: ".external_link",
+      content: ".decoration_content > .row > .external"
+    },
+    rising: {
+      trigger: ".rising_link",
+      content: ".decoration_content > .row > .rising"
+    },
+    roof: {
+      trigger: ".roof_link",
+      content: ".decoration_content > .row > .roof"
+    }
+  };
+  Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_3__["default"])("section.decoration", triggerContentMatchObj3, 0, "after_click");
 });
 
 /***/ }),
