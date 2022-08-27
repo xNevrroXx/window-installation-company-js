@@ -21,8 +21,6 @@ const validateSchema = new Schema({
     }
   }
 });
-  // name: string().required("Обязательное поле").min(2, "Минимум 2 символа"),
-  // phone: string().required("Обязательное поле"), "Неверный номер телефона")
 
 
 function tryValidate(formEl) {
@@ -37,7 +35,7 @@ function tryValidate(formEl) {
     visibleData[name] = value;
   }
 
-  const errors = validateSchema.validate({
+  const errors = validateSchema .validate({
       name: visibleData["user_name"],
       phone: visibleData["user_phone"]
     })

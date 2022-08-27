@@ -1,6 +1,6 @@
 import tryValidate from "./validate";
 
-function feedbackForm(formSelector, url) { // отправляет только поля с тегом "input"
+function feedbackForm(formSelector, url, extraData = {}) { // отправляет только поля с тегом "input"
   const formElems = document.querySelectorAll(formSelector);
   let lastFocusElement = null;
 
@@ -17,10 +17,16 @@ function feedbackForm(formSelector, url) { // отправляет только 
     })
     formEl.addEventListener("submit", async (event) => {
       event.preventDefault();
-      const formData = new URLSearchParams(new FormData(formEl));
+      const formData = new FormData(formEl);
+
+      if(Object.keys(extraData).length) {
+        for (const key in extraData) {
+          formData.append(key, extraData[key]);
+        }
+      }
 
       if (tryValidate(formEl)) {
-        fetch(url, {method: "POST", body: formData})
+        fetch(url, {method: "POST", body: new URLSearchParams(formData)})
           .then(data => data.json())
           .then(json => console.log(json))
           .then(() => formEl.reset())

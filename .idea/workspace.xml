@@ -2,16 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0c38705-e8a8-47a5-8820-3f87da28ef55" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/js/modules/calcFeedbackForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/feedbacks.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/feedbacks.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/modules/files.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/modules/files.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/dist/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/dist/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/dist/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/dist/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/dist/script.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/dist/script.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/js/modules/feedbackForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/js/modules/feedbackForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/js/modules/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/js/modules/modals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/js/modules/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/js/modules/validate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +38,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Владимир/Documents/Programming/Frontend/Studies projects/Node.js/node lessons",
+    "last_opened_file_path": "C:/Users/Владимир/Documents/Programming/Frontend/Studies projects/JS logical tasks/studying",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "vue.rearranger.settings.migration": "true"
@@ -42,6 +46,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Владимир\Documents\Programming\Frontend\Studies projects\Native JS projects\Source\frontend\src\js\modules" />
+      <recent name="C:\Users\Владимир\Documents\Programming\Frontend\Studies projects\Native JS projects\Source\frontend\src\js" />
       <recent name="C:\Users\Владимир\Documents\Programming\Frontend\Studies projects\Native JS projects\Source\backend" />
     </key>
   </component>
@@ -53,7 +59,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661551671208</updated>
-      <workItem from="1661551673341" duration="11997000" />
+      <workItem from="1661551673341" duration="34256000" />
     </task>
     <servers />
   </component>

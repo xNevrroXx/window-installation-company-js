@@ -5971,28 +5971,28 @@ module.exports = g;
 /*!************************!*\
   !*** ./src/js/main.js ***!
   \************************/
-/*! no exports provided */
+/*! exports provided: urlServer */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modal */ "./src/js/modules/modal.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urlServer", function() { return urlServer; });
+/* harmony import */ var _modules_modals__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modals */ "./src/js/modules/modals.js");
 /* harmony import */ var _modules_feedbackForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/feedbackForm */ "./src/js/modules/feedbackForm.js");
 /* harmony import */ var _modules_maskInput__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/maskInput */ "./src/js/modules/maskInput.js");
 /* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js");
+/* harmony import */ var _modules_calcFeedbackForm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/calcFeedbackForm */ "./src/js/modules/calcFeedbackForm.js");
 
 
 
 
+
+const urlServer = "http://localhost:9999/feedbacks";
 window.addEventListener("DOMContentLoaded", () => {
-  Object(_modules_modal__WEBPACK_IMPORTED_MODULE_0__["default"])(".popup_engineer_btn", ".popup_engineer");
-  Object(_modules_modal__WEBPACK_IMPORTED_MODULE_0__["default"])(".phone_link", ".popup");
-  Object(_modules_modal__WEBPACK_IMPORTED_MODULE_0__["default"])(".popup_calc_btn", ".popup_calc");
-  Object(_modules_modal__WEBPACK_IMPORTED_MODULE_0__["default"])(".popup_calc_button", ".popup_calc_profile", "block", function () {
-    document.querySelector(".popup_calc").style.display = "none";
-  });
+  Object(_modules_modals__WEBPACK_IMPORTED_MODULE_0__["default"])(".popup_engineer_btn", ".popup_engineer");
+  Object(_modules_modals__WEBPACK_IMPORTED_MODULE_0__["default"])(".phone_link", ".popup");
   Object(_modules_maskInput__WEBPACK_IMPORTED_MODULE_2__["default"])();
-  Object(_modules_feedbackForm__WEBPACK_IMPORTED_MODULE_1__["default"])(".form", "http://localhost:9999/feedbacks");
+  Object(_modules_feedbackForm__WEBPACK_IMPORTED_MODULE_1__["default"])(".form:not(.form_end)", urlServer);
   const triggerContentMatchObj = {
     tree: {
       trigger: "[data-type-glazing='tree']",
@@ -6035,7 +6035,156 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   };
   Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_3__["default"])(".popup_calc", triggerContentMatchObjIcons, 0, "do_image_more", "calc");
+  Object(_modules_calcFeedbackForm__WEBPACK_IMPORTED_MODULE_4__["default"])(urlServer);
 });
+
+/***/ }),
+
+/***/ "./src/js/modules/calcFeedbackForm.js":
+/*!********************************************!*\
+  !*** ./src/js/modules/calcFeedbackForm.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _feedbackForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./feedbackForm */ "./src/js/modules/feedbackForm.js");
+/* harmony import */ var _modals__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modals */ "./src/js/modules/modals.js");
+
+
+
+
+function calcFeedbackForm(url) {
+  const firstStageForm = {
+    selector: ".popup_calc",
+    getInputFields: function getInputFields() {
+      return {
+        getInputsSizes: () => document.querySelectorAll(`${this.selector} input`),
+        getTypesBalconies: () => document.querySelectorAll(`${this.selector} .balcon_icons_img`)
+      };
+    },
+    getToNextStageBtn: function getToNextStageBtn() {
+      return document.querySelector(`${this.selector} .button.popup_calc_button`);
+    }
+  },
+        secondStageForm = {
+    selector: ".popup_calc_profile",
+    getInputFields: function getInputFields() {
+      return {
+        getSelectGlazing: () => {
+          return document.querySelector(`${this.selector} select[name="view_glazing"]`);
+        },
+        getCheckboxWarm: () => {
+          return document.querySelector(`${this.selector} input[name="warm_glazing"]`);
+        },
+        getCheckboxCold: () => {
+          return document.querySelector(`${this.selector} input[name="cold_glazing"]`);
+        }
+      };
+    },
+    getToNextStageBtn: function getToNextStageBtn() {
+      return document.querySelector(`${this.selector} .button.popup_calc_profile_button`);
+    }
+  },
+        lastStageForm = {
+    selector: ".popup_calc_end"
+  };
+  const dataFeedback = {};
+  let validateErrors = {};
+  Object(_modals__WEBPACK_IMPORTED_MODULE_2__["default"])(".popup_calc_btn", ".popup_calc", "block", function () {
+    firstStageForm.getInputFields().getTypesBalconies().forEach(typeBalcony => {
+      if (typeBalcony.classList.contains("do_image_more")) {
+        dataFeedback["typeBalcony"] = typeBalcony.getAttribute("alt");
+      }
+
+      typeBalcony.addEventListener("click", () => {
+        setTimeout(() => {
+          // wait until tab module change activity class
+          firstStageForm.getInputFields().getTypesBalconies().forEach(newActiveTypeBalcony => {
+            if (newActiveTypeBalcony.classList.contains("do_image_more")) {
+              dataFeedback["typeBalcony"] = newActiveTypeBalcony.querySelector("img").getAttribute("alt");
+            }
+          });
+        }, 0);
+      });
+    });
+    firstStageForm.getInputFields().getInputsSizes().forEach(inputEl => {
+      inputEl.addEventListener("change", function () {
+        dataFeedback[this.name] = this.value.trim();
+      });
+    });
+    firstStageForm.getToNextStageBtn().addEventListener("click", function () {
+      const fields = ["width", "height"];
+      validateErrors = {};
+
+      for (const field of fields) {
+        if (!dataFeedback[field]) {
+          validateErrors[field] = {
+            message: "Обязательное поле для ввода"
+          };
+        } else if (/^\d+$/.test(dataFeedback[field]) === false) {
+          validateErrors[field] = {
+            message: "Требуется числовое значение"
+          };
+        }
+      }
+
+      if (Object.keys(validateErrors).length === 0) {
+        Object(_modals__WEBPACK_IMPORTED_MODULE_2__["activateModal"])(".popup_calc_profile", secondStageFunc);
+      } else {
+        firstStageForm.getInputFields().forEach(inputEl => {
+          inputEl.style.borderColor = Object.keys(validateErrors).includes(inputEl.name) ? "red" : null;
+        });
+      }
+    });
+  });
+
+  function secondStageFunc() {
+    dataFeedback["view_glazing"] = secondStageForm.getInputFields().getSelectGlazing().value;
+    document.querySelector(firstStageForm.selector).style.display = "none";
+    secondStageForm.getInputFields().getSelectGlazing().addEventListener("change", function () {
+      dataFeedback["view_glazing"] = this.value;
+    });
+    secondStageForm.getInputFields().getCheckboxCold().addEventListener("change", function () {
+      if (dataFeedback["warm_glazing"]) dataFeedback["warm_glazing"] = false;
+      dataFeedback[this.name] = this.value;
+    });
+    secondStageForm.getInputFields().getCheckboxWarm().addEventListener("change", function () {
+      if (dataFeedback["cold_glazing"]) dataFeedback["cold_glazing"] = false;
+      dataFeedback[this.name] = this.value;
+    });
+    secondStageForm.getToNextStageBtn().addEventListener("click", function () {
+      validateErrors = {};
+
+      if (!dataFeedback["cold_glazing"] && !dataFeedback["warm_glazing"]) {
+        validateErrors["type_glazing"] = "Выберите один из вариантов";
+      }
+
+      if (Object.keys(validateErrors).length === 0) {
+        Object(_modals__WEBPACK_IMPORTED_MODULE_2__["activateModal"])(lastStageForm.selector, () => {
+          document.querySelector(secondStageForm.selector).style.display = "none";
+        });
+        Object(_feedbackForm__WEBPACK_IMPORTED_MODULE_1__["default"])(`${lastStageForm.selector} form`, url, dataFeedback);
+      } else {
+        document.querySelector(`${secondStageForm.selector} #warm`).style.borderColor = "red";
+        document.querySelector(`${secondStageForm.selector} #cold`).style.borderColor = "red";
+        secondStageForm.getToNextStageBtn().before(createErrorEl(validateErrors["type_glazing"]));
+      }
+    });
+  }
+}
+
+function createErrorEl(text, className = "error") {
+  const errorEl = document.createElement("div");
+  errorEl.className = className;
+  errorEl.textContent = text;
+  return errorEl;
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (calcFeedbackForm);
 
 /***/ }),
 
@@ -6057,7 +6206,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function feedbackForm(formSelector, url) {
+function feedbackForm(formSelector, url, extraData = {}) {
   // отправляет только поля с тегом "input"
   const formElems = document.querySelectorAll(formSelector);
   let lastFocusElement = null;
@@ -6076,12 +6225,18 @@ function feedbackForm(formSelector, url) {
     });
     formEl.addEventListener("submit", async event => {
       event.preventDefault();
-      const formData = new URLSearchParams(new FormData(formEl));
+      const formData = new FormData(formEl);
+
+      if (Object.keys(extraData).length) {
+        for (const key in extraData) {
+          formData.append(key, extraData[key]);
+        }
+      }
 
       if (Object(_validate__WEBPACK_IMPORTED_MODULE_2__["default"])(formEl)) {
         fetch(url, {
           method: "POST",
-          body: formData
+          body: new URLSearchParams(formData)
         }).then(data => data.json()).then(json => console.log(json)).then(() => formEl.reset()).catch(error => console.log(error));
       }
     });
@@ -6232,16 +6387,17 @@ function setMaskPhoneNumber() {
 
 /***/ }),
 
-/***/ "./src/js/modules/modal.js":
-/*!*********************************!*\
-  !*** ./src/js/modules/modal.js ***!
-  \*********************************/
-/*! exports provided: default */
+/***/ "./src/js/modules/modals.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/modals.js ***!
+  \**********************************/
+/*! exports provided: default, activateModal */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-function modal(triggerOpenBtnSelector, modalSelector, activeDisplayTypeStyle = "block", additionalFunctionOnOpen = () => {}) {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "activateModal", function() { return activateModal; });
+function modals(triggerOpenBtnSelector, modalSelector, activeDisplayTypeStyle = "block", additionalFunctionOnOpen = () => {}) {
   const triggerOpenBtns = document.querySelectorAll(triggerOpenBtnSelector);
   const modalEl = document.querySelector(modalSelector);
   triggerOpenBtns.forEach(triggerEl => {
@@ -6259,7 +6415,21 @@ function modal(triggerOpenBtnSelector, modalSelector, activeDisplayTypeStyle = "
   });
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (modal);
+function activateModal(modalSelector, additionalFunctionOnOpen = () => {}) {
+  const modalEl = document.querySelector(modalSelector);
+  modalEl.style.display = "block";
+  additionalFunctionOnOpen();
+  modalEl.addEventListener("click", event => {
+    const target = event.target;
+
+    if (target.tagName === "STRONG" || target.tagName === "BUTTON" && target.classList.contains("popup_close") || target === event.currentTarget) {
+      modalEl.style.display = "none";
+    }
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (modals);
+
 
 /***/ }),
 
@@ -6354,8 +6524,7 @@ const validateSchema = new validate__WEBPACK_IMPORTED_MODULE_1___default.a({
       match: "Неверный номер телефона"
     }
   }
-}); // name: string().required("Обязательное поле").min(2, "Минимум 2 символа"),
-// phone: string().required("Обязательное поле"), "Неверный номер телефона")
+});
 
 function tryValidate(formEl) {
   const nameField = formEl.querySelector("input[name='user_name']");
