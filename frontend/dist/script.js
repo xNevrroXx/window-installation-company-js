@@ -6069,7 +6069,6 @@ function feedbackForm(formSelector, url) {
       const target = event.target;
 
       if (target.tagName === "INPUT" && target.selectionStart < 2) {
-        console.log(true);
         setTimeout(function () {
           target.selectionStart = target.selectionEnd = 10000;
         }, 0);
@@ -6078,18 +6077,12 @@ function feedbackForm(formSelector, url) {
     formEl.addEventListener("submit", async event => {
       event.preventDefault();
       const formData = new URLSearchParams(new FormData(formEl));
-      const obj = {};
-
-      for (const [name, value] of formData) {
-        obj[name] = value;
-      }
 
       if (Object(_validate__WEBPACK_IMPORTED_MODULE_2__["default"])(formEl)) {
-        // отправка данных и reset формы.
         fetch(url, {
           method: "POST",
           body: formData
-        }).then(() => formEl.reset()).catch(error => console.log(error));
+        }).then(data => data.json()).then(json => console.log(json)).then(() => formEl.reset()).catch(error => console.log(error));
       }
     });
   });
