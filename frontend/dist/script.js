@@ -5991,7 +5991,10 @@ __webpack_require__.r(__webpack_exports__);
 
 const urlServer = "http://localhost:9999/feedbacks";
 window.addEventListener("DOMContentLoaded", () => {
-  // modals
+  setTimeout(() => {
+    Object(_modules_modals__WEBPACK_IMPORTED_MODULE_0__["activateModal"])(".popup");
+  }, 1000 * 60); // modals
+
   Object(_modules_modals__WEBPACK_IMPORTED_MODULE_0__["default"])(".popup_engineer_btn", ".popup_engineer");
   Object(_modules_modals__WEBPACK_IMPORTED_MODULE_0__["default"])(".phone_link", ".popup"); // loop images only js
 
