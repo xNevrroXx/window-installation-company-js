@@ -7,7 +7,7 @@
       <change beforePath="$PROJECT_DIR$/frontend/dist/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/dist/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/dist/script.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/dist/script.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/js/modules/calcFeedbackForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/js/modules/calcFeedbackForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/js/modules/modals.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/js/modules/modals.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +30,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Владимир/Documents/Programming/Frontend/Studies projects/JS logical tasks/studying",
+    "last_opened_file_path": "C:/Users/Владимир/Documents/Programming/Frontend/Studies projects/Native JS projects/Source",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "vue.rearranger.settings.migration": "true"
@@ -51,7 +51,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661551671208</updated>
-      <workItem from="1661551673341" duration="47073000" />
+      <workItem from="1661551673341" duration="47214000" />
+      <workItem from="1661654581277" duration="178000" />
+      <workItem from="1661694451567" duration="21000" />
+      <workItem from="1661694540073" duration="56000" />
+      <workItem from="1661697386538" duration="2334000" />
     </task>
     <servers />
   </component>

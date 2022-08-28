@@ -8,12 +8,12 @@ import countdown from "./modules/countdown";
 export const urlServer = "http://localhost:9999/feedbacks";
 
 window.addEventListener("DOMContentLoaded", () => {
+  // modals
   let wasOpenedSomeModal = false;
   setTimeout(() => {
     if(!wasOpenedSomeModal)
       activateModal(".popup");
   }, 1000*60);
-  // modals
   modals(".popup_engineer_btn", ".popup_engineer", "block", () => {
     wasOpenedSomeModal=true
   });

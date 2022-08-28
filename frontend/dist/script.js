@@ -5991,11 +5991,11 @@ __webpack_require__.r(__webpack_exports__);
 
 const urlServer = "http://localhost:9999/feedbacks";
 window.addEventListener("DOMContentLoaded", () => {
+  // modals
   let wasOpenedSomeModal = false;
   setTimeout(() => {
     if (!wasOpenedSomeModal) Object(_modules_modals__WEBPACK_IMPORTED_MODULE_0__["activateModal"])(".popup");
-  }, 1000 * 60); // modals
-
+  }, 1000 * 60);
   Object(_modules_modals__WEBPACK_IMPORTED_MODULE_0__["default"])(".popup_engineer_btn", ".popup_engineer", "block", () => {
     wasOpenedSomeModal = true;
   });
@@ -6520,26 +6520,23 @@ function setMaskPhoneNumber() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "activateModal", function() { return activateModal; });
-function modals(triggerOpenBtnSelector, modalSelector, activeDisplayTypeStyle = "block", additionalFunctionOnOpen = () => {}) {
+function modals(triggerOpenBtnSelector, modalSelector, activeDisplayTypeStyle = "block", additionalFunctionOnOpen = () => {}, additionalFunctionOnClose = () => {}) {
   const triggerOpenBtns = document.querySelectorAll(triggerOpenBtnSelector);
   const modalEl = document.querySelector(modalSelector);
+  const dispatchOpenModalEvent = new CustomEvent("openModal");
   triggerOpenBtns.forEach(triggerEl => {
-    triggerEl.addEventListener("click", () => {
+    triggerEl.addEventListener("openModal", () => {
       additionalFunctionOnOpen();
       modalEl.style.display = activeDisplayTypeStyle;
+      activateModal(modalEl, activeDisplayTypeStyle, additionalFunctionOnOpen, additionalFunctionOnClose);
     });
-  });
-  modalEl.addEventListener("click", event => {
-    const target = event.target;
-
-    if (target.tagName === "STRONG" || target.tagName === "BUTTON" && target.classList.contains("popup_close") || target === event.currentTarget) {
-      modalEl.style.display = "none";
-    }
+    triggerEl.addEventListener("click", () => triggerEl.dispatchEvent(dispatchOpenModalEvent));
   });
 }
 
-function activateModal(modalSelector, activeDisplayTypeStyle = "block", additionalFunctionOnOpen = () => {}, additionalFunctionOnClose = () => {}) {
-  const modalEl = document.querySelector(modalSelector);
+function activateModal(modalSelectorOrElement, activeDisplayTypeStyle = "block", additionalFunctionOnOpen = () => {}, additionalFunctionOnClose = () => {}) {
+  let modalEl = typeof modalSelectorOrElement === "string" ? document.querySelector(modalSelectorOrElement) : modalSelectorOrElement;
+  console.log(typeof modalSelectorOrElement);
   modalEl.style.display = activeDisplayTypeStyle;
   additionalFunctionOnOpen();
   modalEl.addEventListener("click", event => {
