@@ -3,6 +3,7 @@ import feedbackForm from "./modules/feedbackForm";
 import setMaskPhoneNumber from "./modules/maskInput";
 import activateTabs from "./modules/tabs";
 import calcFeedbackForm from "./modules/calcFeedbackForm";
+import countdown from "./modules/countdown";
 
 export const urlServer = "http://localhost:9999/feedbacks";
 
@@ -80,4 +81,26 @@ window.addEventListener("DOMContentLoaded", () => {
     },
   }
   activateTabs("section.decoration", triggerContentMatchObj3, 0, "after_click")
+
+  // countdown / timer
+  const matchObjCountdown = {
+    wrapperSel: "section.sale .timer1 > .container1",
+    days: {
+      numberSel: "#days-count",
+      signatureSel: "#days-description"
+    },
+    hours: {
+      numberSel: "#hours-count",
+      signatureSel: "#days-description"
+    },
+    minutes: {
+      numberSel: "#minutes-count",
+      signatureSel: "#days-description"
+    },
+    seconds: {
+      numberSel: "#seconds-count",
+      signatureSel: "#days-description"
+    }
+  }
+  countdown(matchObjCountdown, new Date(2022, 7, 28, 6, 0).getTime());
 })

@@ -5982,6 +5982,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_maskInput__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/maskInput */ "./src/js/modules/maskInput.js");
 /* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js");
 /* harmony import */ var _modules_calcFeedbackForm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/calcFeedbackForm */ "./src/js/modules/calcFeedbackForm.js");
+/* harmony import */ var _modules_countdown__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/countdown */ "./src/js/modules/countdown.js");
+
 
 
 
@@ -6057,7 +6059,28 @@ window.addEventListener("DOMContentLoaded", () => {
       content: ".decoration_content > .row > .roof"
     }
   };
-  Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_3__["default"])("section.decoration", triggerContentMatchObj3, 0, "after_click");
+  Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_3__["default"])("section.decoration", triggerContentMatchObj3, 0, "after_click"); // countdown / timer
+
+  const matchObjCountdown = {
+    wrapperSel: "section.sale .timer1 > .container1",
+    days: {
+      numberSel: "#days-count",
+      signatureSel: "#days-description"
+    },
+    hours: {
+      numberSel: "#hours-count",
+      signatureSel: "#days-description"
+    },
+    minutes: {
+      numberSel: "#minutes-count",
+      signatureSel: "#days-description"
+    },
+    seconds: {
+      numberSel: "#seconds-count",
+      signatureSel: "#days-description"
+    }
+  };
+  Object(_modules_countdown__WEBPACK_IMPORTED_MODULE_5__["default"])(matchObjCountdown, new Date(2022, 7, 28, 6, 0).getTime());
 });
 
 /***/ }),
@@ -6207,6 +6230,50 @@ function createErrorEl(text, className = "error") {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (calcFeedbackForm);
+
+/***/ }),
+
+/***/ "./src/js/modules/countdown.js":
+/*!*************************************!*\
+  !*** ./src/js/modules/countdown.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function countdown(matchObj, absoluteEndTimeMs) {
+  const mainWrapper = document.querySelector(matchObj.wrapperSel);
+  let timeoutId = null;
+  setTime();
+  setTimeout(() => {
+    setTime();
+    timeoutId = setInterval(() => {
+      setTime();
+      console.log(new Date().getMilliseconds());
+    }, 1000);
+    setTime();
+  }, 1000 - new Date().getMilliseconds());
+
+  function setTime() {
+    const presentTimeMs = new Date().getTime();
+    const tillEndTimeMs = new Date(absoluteEndTimeMs - presentTimeMs).getTime();
+    mainWrapper.querySelector(matchObj.days.numberSel).textContent = getZero(+(tillEndTimeMs / (1000 * 60 * 60 * 24)).toFixed());
+    mainWrapper.querySelector(matchObj.hours.numberSel).textContent = getZero(+(tillEndTimeMs / (1000 * 60 * 60) % 24).toFixed());
+    mainWrapper.querySelector(matchObj.minutes.numberSel).textContent = getZero(+(tillEndTimeMs / (1000 * 60) % 60).toFixed());
+    mainWrapper.querySelector(matchObj.seconds.numberSel).textContent = getZero(+(tillEndTimeMs / 1000 % 60).toFixed());
+  }
+
+  function getZero(number) {
+    if (number / 10 < 1) {
+      return `0${number}`;
+    }
+
+    return number;
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (countdown);
 
 /***/ }),
 
