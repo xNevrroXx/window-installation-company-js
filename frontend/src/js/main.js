@@ -8,14 +8,20 @@ import countdown from "./modules/countdown";
 export const urlServer = "http://localhost:9999/feedbacks";
 
 window.addEventListener("DOMContentLoaded", () => {
+  let wasOpenedSomeModal = false;
   setTimeout(() => {
-    activateModal(".popup");
+    if(!wasOpenedSomeModal)
+      activateModal(".popup");
   }, 1000*60);
   // modals
-  modals(".popup_engineer_btn", ".popup_engineer");
-  modals(".phone_link", ".popup");
+  modals(".popup_engineer_btn", ".popup_engineer", "block", () => {
+    wasOpenedSomeModal=true
+  });
+  modals(".phone_link", ".popup", "block", () => {
+    wasOpenedSomeModal=true
+  });
 
-  // loop images only js
+  // magnify images only js
   document.querySelectorAll("section.works a").forEach(linkEl => {
     linkEl.addEventListener("click", (event) => {
       event.preventDefault();

@@ -78,10 +78,10 @@ function calcFeedbackForm(url) {
       }
 
       if(Object.keys(validateErrors).length === 0) {
-        activateModal(".popup_calc_profile", secondStageFunc);
+        activateModal(".popup_calc_profile", "block", secondStageFunc);
       }
       else {
-        firstStageForm.getInputFields().forEach(inputEl => {
+        firstStageForm.getInputFields().getInputsSizes().forEach(inputEl => {
           inputEl.style.borderColor = Object.keys(validateErrors).includes(inputEl.name) ? "red" : null;
         })
       }
@@ -116,7 +116,7 @@ function calcFeedbackForm(url) {
       }
 
       if(Object.keys(validateErrors).length === 0) {
-        activateModal(lastStageForm.selector, () => {
+        activateModal(lastStageForm.selector, "block", () => {
           document.querySelector(secondStageForm.selector).style.display = "none";
         });
         feedbackForm(`${lastStageForm.selector} form`, url, dataFeedback);

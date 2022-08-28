@@ -5991,12 +5991,17 @@ __webpack_require__.r(__webpack_exports__);
 
 const urlServer = "http://localhost:9999/feedbacks";
 window.addEventListener("DOMContentLoaded", () => {
+  let wasOpenedSomeModal = false;
   setTimeout(() => {
-    Object(_modules_modals__WEBPACK_IMPORTED_MODULE_0__["activateModal"])(".popup");
+    if (!wasOpenedSomeModal) Object(_modules_modals__WEBPACK_IMPORTED_MODULE_0__["activateModal"])(".popup");
   }, 1000 * 60); // modals
 
-  Object(_modules_modals__WEBPACK_IMPORTED_MODULE_0__["default"])(".popup_engineer_btn", ".popup_engineer");
-  Object(_modules_modals__WEBPACK_IMPORTED_MODULE_0__["default"])(".phone_link", ".popup"); // loop images only js
+  Object(_modules_modals__WEBPACK_IMPORTED_MODULE_0__["default"])(".popup_engineer_btn", ".popup_engineer", "block", () => {
+    wasOpenedSomeModal = true;
+  });
+  Object(_modules_modals__WEBPACK_IMPORTED_MODULE_0__["default"])(".phone_link", ".popup", "block", () => {
+    wasOpenedSomeModal = true;
+  }); // magnify images only js
 
   document.querySelectorAll("section.works a").forEach(linkEl => {
     linkEl.addEventListener("click", event => {
@@ -6208,9 +6213,9 @@ function calcFeedbackForm(url) {
       }
 
       if (Object.keys(validateErrors).length === 0) {
-        Object(_modals__WEBPACK_IMPORTED_MODULE_2__["activateModal"])(".popup_calc_profile", secondStageFunc);
+        Object(_modals__WEBPACK_IMPORTED_MODULE_2__["activateModal"])(".popup_calc_profile", "block", secondStageFunc);
       } else {
-        firstStageForm.getInputFields().forEach(inputEl => {
+        firstStageForm.getInputFields().getInputsSizes().forEach(inputEl => {
           inputEl.style.borderColor = Object.keys(validateErrors).includes(inputEl.name) ? "red" : null;
         });
       }
@@ -6239,7 +6244,7 @@ function calcFeedbackForm(url) {
       }
 
       if (Object.keys(validateErrors).length === 0) {
-        Object(_modals__WEBPACK_IMPORTED_MODULE_2__["activateModal"])(lastStageForm.selector, () => {
+        Object(_modals__WEBPACK_IMPORTED_MODULE_2__["activateModal"])(lastStageForm.selector, "block", () => {
           document.querySelector(secondStageForm.selector).style.display = "none";
         });
         Object(_feedbackForm__WEBPACK_IMPORTED_MODULE_1__["default"])(`${lastStageForm.selector} form`, url, dataFeedback);
