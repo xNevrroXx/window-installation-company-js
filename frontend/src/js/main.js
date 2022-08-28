@@ -1,4 +1,4 @@
-import modals from "./modules/modals";
+import modals, {activateModal} from "./modules/modals";
 import feedbackForm from "./modules/feedbackForm";
 import setMaskPhoneNumber from "./modules/maskInput";
 import activateTabs from "./modules/tabs";
@@ -11,6 +11,37 @@ window.addEventListener("DOMContentLoaded", () => {
   // modals
   modals(".popup_engineer_btn", ".popup_engineer");
   modals(".phone_link", ".popup");
+
+  // loop images only js
+  document.querySelectorAll("section.works a").forEach(linkEl => {
+    linkEl.addEventListener("click", (event) => {
+      event.preventDefault();
+      const srcImg = linkEl.getAttribute("href");
+
+      const modalEl = document.createElement("div");
+      modalEl.classList.add("modal-big-image");
+      modalEl.style.cssText = `
+        display: none; 
+        position: fixed; 
+        left: 0; 
+        top: 0; 
+        width: 100%; 
+        height: 100%; 
+        background-color: rgba(0,0,0, 0.5);
+        justify-content: center;
+        align-items: center;
+      `;
+      modalEl.innerHTML = `
+        <img src="${srcImg}" alt="window" style="max-height: 90%"/>
+      `;
+
+      document.querySelector("body").append(modalEl);
+      activateModal(".modal-big-image", "flex",() => {}, () => {
+        modalEl.remove();
+      })
+    })
+  })
+
 
   // feedback forms
   setMaskPhoneNumber();

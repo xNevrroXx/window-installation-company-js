@@ -21,10 +21,10 @@ function modals(triggerOpenBtnSelector, modalSelector, activeDisplayTypeStyle = 
   })
 }
 
-function activateModal(modalSelector, additionalFunctionOnOpen = () => {}) {
+function activateModal(modalSelector, activeDisplayTypeStyle = "block", additionalFunctionOnOpen = () => {}, additionalFunctionOnClose = () => {}) {
   const modalEl = document.querySelector(modalSelector);
 
-  modalEl.style.display = "block";
+  modalEl.style.display = activeDisplayTypeStyle;
   additionalFunctionOnOpen();
 
   modalEl.addEventListener("click", (event) => {
@@ -35,6 +35,7 @@ function activateModal(modalSelector, additionalFunctionOnOpen = () => {}) {
       target === event.currentTarget
     ) {
       modalEl.style.display = "none";
+      additionalFunctionOnClose();
     }
   })
 }

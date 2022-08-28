@@ -5993,7 +5993,34 @@ const urlServer = "http://localhost:9999/feedbacks";
 window.addEventListener("DOMContentLoaded", () => {
   // modals
   Object(_modules_modals__WEBPACK_IMPORTED_MODULE_0__["default"])(".popup_engineer_btn", ".popup_engineer");
-  Object(_modules_modals__WEBPACK_IMPORTED_MODULE_0__["default"])(".phone_link", ".popup"); // feedback forms
+  Object(_modules_modals__WEBPACK_IMPORTED_MODULE_0__["default"])(".phone_link", ".popup"); // loop images only js
+
+  document.querySelectorAll("section.works a").forEach(linkEl => {
+    linkEl.addEventListener("click", event => {
+      event.preventDefault();
+      const srcImg = linkEl.getAttribute("href");
+      const modalEl = document.createElement("div");
+      modalEl.classList.add("modal-big-image");
+      modalEl.style.cssText = `
+        display: none; 
+        position: fixed; 
+        left: 0; 
+        top: 0; 
+        width: 100%; 
+        height: 100%; 
+        background-color: rgba(0,0,0, 0.5);
+        justify-content: center;
+        align-items: center;
+      `;
+      modalEl.innerHTML = `
+        <img src="${srcImg}" alt="window" style="max-height: 90%"/>
+      `;
+      document.querySelector("body").append(modalEl);
+      Object(_modules_modals__WEBPACK_IMPORTED_MODULE_0__["activateModal"])(".modal-big-image", "flex", () => {}, () => {
+        modalEl.remove();
+      });
+    });
+  }); // feedback forms
 
   Object(_modules_maskInput__WEBPACK_IMPORTED_MODULE_2__["default"])();
   Object(_modules_feedbackForm__WEBPACK_IMPORTED_MODULE_1__["default"])(".form:not(.form_end)", urlServer);
@@ -6250,10 +6277,9 @@ function countdown(matchObj, absoluteEndTimeMs) {
     setTime();
     timeoutId = setInterval(() => {
       setTime();
-      console.log(new Date().getMilliseconds());
     }, 1000);
     setTime();
-  }, 1000 - new Date().getMilliseconds());
+  }, 1000 - new Date().getMilliseconds()); // for brief difference
 
   function setTime() {
     const presentTimeMs = new Date().getTime();
@@ -6504,15 +6530,16 @@ function modals(triggerOpenBtnSelector, modalSelector, activeDisplayTypeStyle = 
   });
 }
 
-function activateModal(modalSelector, additionalFunctionOnOpen = () => {}) {
+function activateModal(modalSelector, activeDisplayTypeStyle = "block", additionalFunctionOnOpen = () => {}, additionalFunctionOnClose = () => {}) {
   const modalEl = document.querySelector(modalSelector);
-  modalEl.style.display = "block";
+  modalEl.style.display = activeDisplayTypeStyle;
   additionalFunctionOnOpen();
   modalEl.addEventListener("click", event => {
     const target = event.target;
 
     if (target.tagName === "STRONG" || target.tagName === "BUTTON" && target.classList.contains("popup_close") || target === event.currentTarget) {
       modalEl.style.display = "none";
+      additionalFunctionOnClose();
     }
   });
 }

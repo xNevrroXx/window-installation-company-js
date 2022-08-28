@@ -6,13 +6,11 @@ function countdown(matchObj, absoluteEndTimeMs) {
   setTime();
   setTimeout(() => {
     setTime();
-
     timeoutId = setInterval(() => {
       setTime();
-      console.log(new Date().getMilliseconds())
     }, 1000)
     setTime();
-  }, 1000 - new Date().getMilliseconds())
+  }, 1000 - new Date().getMilliseconds()) // for brief difference
 
   function setTime() {
     const presentTimeMs = new Date().getTime();

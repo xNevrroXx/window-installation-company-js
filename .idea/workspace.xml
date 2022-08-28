@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0c38705-e8a8-47a5-8820-3f87da28ef55" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/js/modules/countdown.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/dist/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/dist/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/dist/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/dist/script.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/dist/script.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/js/modules/countdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/js/modules/countdown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/js/modules/modals.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/js/modules/modals.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +51,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661551671208</updated>
-      <workItem from="1661551673341" duration="42939000" />
+      <workItem from="1661551673341" duration="45458000" />
     </task>
     <servers />
   </component>
